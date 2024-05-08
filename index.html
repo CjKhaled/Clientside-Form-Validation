@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientside Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>A Very Strict Form</legend>
+            <div class="input-box">
+                <label for="email">Email:</label>
+                <input class="default" type="text" name="email" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required minlength="5" maxlength="30">
+                <span class="error email"></span>
+            </div>
+            <div class="input-box">
+                <label for="country">Country:</label>
+                <input class="default" type="text" name="country" id="country" pattern="^[a-zA-Z]+$" required minlength="2" maxlength="2">
+                <span class="error country"></span>
+            </div>
+            <div class="input-box">
+                <label for="zipcode">Zipcode:</label>
+                <input class="default" type="text" name="zipcode" id="zipcode" pattern="^[0-9]*$" required minlength="5" maxlength="5">
+                <span class="error zipcode"></span>
+            </div>
+            <div class="input-box">
+                <label for="password">Password:</label>
+                <input class="default" type="password" name="password" id="password" required minlength="6" maxlength="15">
+                <span class="error password"></span>
+            </div>
+            <div class="input-box">
+                <label for="password2">Confirm password:</label>
+                <input class="default" type="password" name="password2" id="password2" required minlength="6" maxlength="15">
+                <span class="error password2"></span>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </fieldset>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
