@@ -37,6 +37,10 @@ function updateError(input, error) {
 
 formSubmit.addEventListener('click', (e) => {
     e.preventDefault();
+    updateError(email, emailError)
+    updateError(country, countryError)
+    updateError(zipcode, zipcodeError)
+    updateError(password2, password2Error)
 })
 
 email.addEventListener('input', () => {
